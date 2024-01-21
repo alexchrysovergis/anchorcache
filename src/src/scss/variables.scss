@@ -1,2 +1,8 @@
-$primary: #F3D791;
-$secondary: #201e19;
+$theme-colors: (
+  primary: #F3D791,
+  secondary: #201e19,
+  button-primary: #F8E8BF,
+  button-primary-hover: #F4E0AE,
+  button-secondary-hover: lighten(#201e19, 5%),
+  button-secondary-active: lighten(#201e19, 10%)
+);

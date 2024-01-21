@@ -4,51 +4,41 @@
 @import 'mixins';
 
 ::selection {
-  background-color: $primary;
-  color: $secondary;
+  background-color: map-get($theme-colors, primary);
+  color: map-get($theme-colors, secondary);
 }
 
 body {
   font-family: 'Inter', sans-serif;
   background: url('../../../htdocs/images/hero-background.jpg');
-  color:$secondary;
+  color: map-get($theme-colors, secondary);
   cursor: url('../../../htdocs/images/cursor.svg') 10 10, auto;
+}
+
+.header{
+  background-color: map-get($theme-colors, secondary);
+  color: map-get($theme-colors, primary);
+  @include header-footer-common;
 }
 
 h1{
-  color: $primary;
-  transition: opacity 0.5s ease;
-}
-
-h1:hover{
-  opacity:0.75;
+  color: map-get($theme-colors, primary);
+  @include element-opacity;
 }
 
 h2{
-  color: $secondary;
-  transition: opacity 0.5s ease;
-}
-
-h2:hover{
-  opacity:0.75;
+  color: map-get($theme-colors, secondary);
+  @include element-opacity;
 }
 
 label{
-  color: $secondary;
-  transition: opacity 0.5s ease;
+  color: map-get($theme-colors, secondary);
   cursor: url('../../../htdocs/images/cursor.svg') 10 10, auto;
-}
-
-label:hover{
-  opacity:0.75;
+  @include element-opacity;
 }
 
 img{
-  transition: opacity 0.5s ease;
-}
-
-img:hover{
-  opacity:0.75;
+  @include element-opacity;
 }
 
 #input-el {
@@ -56,63 +46,56 @@ img:hover{
   padding: 10px;
   box-sizing: border-box;
   border: none;
-  background: #F8E8BF;
+  background: map-get($theme-colors, button-primary);
   transition: background 0.5s ease;
   outline: none;
-  color:$secondary;
+  color: map-get($theme-colors, secondary);
   font-size:14px;
   text-align: center;
-}
 
-#input-el:hover {
-  background: #F4E0AE;
+&:hover {
+  background: map-get($theme-colors, button-primary-hover);
   cursor: url('../../../htdocs/images/cursor-text.svg') 10 10, text;
-}
+  }
 
-#input-el:active{
-  background: $primary;
+&:active {
+  background: map-get($theme-colors, primary);
+  }
+
 }
 
 #input-btn {
-  border-radius: 50px;
-  background: #F8E8BF;
-  color: #222;
-  padding: 10px 25px;
-  border: none;
-  transition: background 0.5s ease;
-  font-size:14px;
+  background: map-get($theme-colors, button-primary);
+  color: map-get($theme-colors, secondary);
   cursor: url('../../../htdocs/images/hand-pointing.svg') 10 10, pointer;
-  outline: none;
+  padding: 10px 25px;
+  @include button-common;
+
+  &:hover {
+    background: map-get($theme-colors, button-primary-hover);
+  }
+
+  &:active {
+    background: map-get($theme-colors, primary);
+    cursor: url('../../../htdocs/images/cursor-click.svg') 10 10, pointer;
+  }
 }
 
-#input-btn:hover{
-  background: #F4E0AE;
-}
+#purge-btn {
+  background: map-get($theme-colors, secondary);
+  color: map-get($theme-colors, button-primary);
+  cursor: url('../../../htdocs/images/hand-pointing-footer.svg') 10 10, pointer;
+  padding: 10px 20px;
+  @include button-common;
 
-#input-btn:active{
-  background: $primary;
-  cursor: url('../../../htdocs/images/cursor-click.svg') 10 10, pointer;
-}
+  &:hover {
+    background: map-get($theme-colors, button-secondary-hover);
+  }
 
-#purge-btn{
-border-radius: 50px;
-background: #222;
-color: #F8E8BF;
-padding: 10px 20px;
-border: none;
-transition: background 0.5s ease;
-font-size:14px;
-cursor: url('../../../htdocs/images/hand-pointing-footer.svg') 10 10, pointer;
-outline: none;
-}
-
-#purge-btn:hover{
-background: #333;
-}
-
-#purge-btn:active{
-background: #222;
-cursor: url('../../../htdocs/images/cursor-click-footer.svg') 10 10, pointer;
+  &:active {
+    background: map-get($theme-colors, button-secondary-active);
+    cursor: url('../../../htdocs/images/cursor-click-footer.svg') 10 10, pointer;
+  }
 }
 
 #ul-el {
@@ -122,18 +105,29 @@ cursor: url('../../../htdocs/images/cursor-click-footer.svg') 10 10, pointer;
 }
 
 .custom-link {
-  color: $secondary;
+  color: map-get($theme-colors, secondary);
   cursor: url('../../../htdocs/images/hand-pointing.svg') 10 10, pointer;
   transition: opacity 0.5s ease-in-out;
   text-decoration: none;
   outline: 0;
   text-decoration-style: none;
-}
+  @include element-opacity;
 
-.custom-link:hover {
+&:hover {
   text-decoration-style: none;
   outline: 0;
-  opacity: 0.75;
+  }
+}
+
+.github-link{
+  text-decoration: none;
+  color: map-get($theme-colors, primary);
+  cursor: url('../../../htdocs/images/hand-pointing-footer.svg') 10 10, pointer;
+  @include element-opacity;
+}
+
+.selected-link{
+  opacity:0.75;
 }
 
 @keyframes fadeIn {
@@ -163,28 +157,6 @@ cursor: url('../../../htdocs/images/cursor-click-footer.svg') 10 10, pointer;
   }
 }
 
-.footer {
-  background-color: $secondary;
-  color: $primary;
-  text-align: center;
-  transition: opacity 0.5s ease;
-  cursor: url('../../../htdocs/images/cursor-footer.svg') 10 10, auto;
-}
-
-.footer:hover{
-  opacity:0.95;
-}
-
-.github-link{
-  text-decoration: none;
-  color: $primary;
-  cursor: url('../../../htdocs/images/hand-pointing-footer.svg') 10 10, pointer;
-}
-
-.github-link:hover{
-  opacity:0.95;
-}
-
 .fade-in{
   opacity: 0;
   transition: opacity 2.5s;
@@ -210,80 +182,8 @@ cursor: url('../../../htdocs/images/cursor-click-footer.svg') 10 10, pointer;
   animation: shake 0.5s ease-in-out;
 }
 
-.selected-link{
-  opacity:0.75;
-}
-
-.header{
-  background-color: $secondary;
-  color: $primary;
-  transition: opacity 0.5s ease;
-  cursor: url('../../../htdocs/images/cursor-footer.svg') 10 10, auto;
-}
-
-.header:hover{
-  opacity:0.95;
-}
-
-
-.send-email {
-border-radius: 50px;
-background: #F8E8BF;
-color: #222;
-padding: 10px 25px;
-border: none;
-transition: background 0.5s ease;
-font-size:14px;
-cursor: url('../../../htdocs/images/hand-pointing.svg') 10 10, pointer;
-outline: none;
-}
-
-.send-email:hover{
-background: #F4E0AE;
-}
-
-.send-email:active{
-background: $primary;
-cursor: url('../../../htdocs/images/cursor-click.svg') 10 10, pointer;
-}
-
-#sender-email {
-border-radius: 50px;
-background: #F8E8BF;
-color: #222;
-padding: 10px 25px;
-border: none;
-transition: background 0.5s ease;
-font-size:14px;
-cursor: url('../../../htdocs/images/hand-pointing.svg') 10 10, pointer;
-outline: none;
-}
-
-#sender-email:hover{
-background: #F4E0AE;
-}
-
-#sender-email:active{
-background: $primary;
-cursor: url('../../../htdocs/images/cursor-click.svg') 10 10, pointer;
-}
-
-#message {
-border-radius: 5px;
-background: #F8E8BF;
-color: #222;
-border: none;
-transition: background 0.5s ease;
-font-size:14px;
-cursor: url('../../../htdocs/images/hand-pointing.svg') 10 10, pointer;
-outline: none;
-}
-
-#message:hover{
-background: #F4E0AE;
-}
-
-#message:active{
-background: $primary;
-cursor: url('../../../htdocs/images/cursor-click.svg') 10 10, pointer;
+.footer {
+  background-color: map-get($theme-colors, secondary);
+  color: map-get($theme-colors, primary);
+  @include header-footer-common;
 }
