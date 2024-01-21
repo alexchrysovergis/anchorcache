@@ -1,0 +1,289 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
+@import 'variables';
+@import 'mixins';
+
+::selection {
+  background-color: $primary;
+  color: $secondary;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: url('../../../htdocs/images/hero-background.jpg');
+  color:$secondary;
+  cursor: url('../../../htdocs/images/cursor.svg') 10 10, auto;
+}
+
+h1{
+  color: $primary;
+  transition: opacity 0.5s ease;
+}
+
+h1:hover{
+  opacity:0.75;
+}
+
+h2{
+  color: $secondary;
+  transition: opacity 0.5s ease;
+}
+
+h2:hover{
+  opacity:0.75;
+}
+
+label{
+  color: $secondary;
+  transition: opacity 0.5s ease;
+  cursor: url('../../../htdocs/images/cursor.svg') 10 10, auto;
+}
+
+label:hover{
+  opacity:0.75;
+}
+
+img{
+  transition: opacity 0.5s ease;
+}
+
+img:hover{
+  opacity:0.75;
+}
+
+#input-el {
+  border-radius: 50px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  background: #F8E8BF;
+  transition: background 0.5s ease;
+  outline: none;
+  color:$secondary;
+  font-size:14px;
+  text-align: center;
+}
+
+#input-el:hover {
+  background: #F4E0AE;
+  cursor: url('../../../htdocs/images/cursor-text.svg') 10 10, text;
+}
+
+#input-el:active{
+  background: $primary;
+}
+
+#input-btn {
+  border-radius: 50px;
+  background: #F8E8BF;
+  color: #222;
+  padding: 10px 25px;
+  border: none;
+  transition: background 0.5s ease;
+  font-size:14px;
+  cursor: url('../../../htdocs/images/hand-pointing.svg') 10 10, pointer;
+  outline: none;
+}
+
+#input-btn:hover{
+  background: #F4E0AE;
+}
+
+#input-btn:active{
+  background: $primary;
+  cursor: url('../../../htdocs/images/cursor-click.svg') 10 10, pointer;
+}
+
+#purge-btn{
+border-radius: 50px;
+background: #222;
+color: #F8E8BF;
+padding: 10px 20px;
+border: none;
+transition: background 0.5s ease;
+font-size:14px;
+cursor: url('../../../htdocs/images/hand-pointing-footer.svg') 10 10, pointer;
+outline: none;
+}
+
+#purge-btn:hover{
+background: #333;
+}
+
+#purge-btn:active{
+background: #222;
+cursor: url('../../../htdocs/images/cursor-click-footer.svg') 10 10, pointer;
+}
+
+#ul-el {
+  min-height:100px;
+  list-style: none;
+  text-align: center;
+}
+
+.custom-link {
+  color: $secondary;
+  cursor: url('../../../htdocs/images/hand-pointing.svg') 10 10, pointer;
+  transition: opacity 0.5s ease-in-out;
+  text-decoration: none;
+  outline: 0;
+  text-decoration-style: none;
+}
+
+.custom-link:hover {
+  text-decoration-style: none;
+  outline: 0;
+  opacity: 0.75;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.anchor-list:last-child {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut 0.5s ease-in-out;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.footer {
+  background-color: $secondary;
+  color: $primary;
+  text-align: center;
+  transition: opacity 0.5s ease;
+  cursor: url('../../../htdocs/images/cursor-footer.svg') 10 10, auto;
+}
+
+.footer:hover{
+  opacity:0.95;
+}
+
+.github-link{
+  text-decoration: none;
+  color: $primary;
+  cursor: url('../../../htdocs/images/hand-pointing-footer.svg') 10 10, pointer;
+}
+
+.github-link:hover{
+  opacity:0.95;
+}
+
+.fade-in{
+  opacity: 0;
+  transition: opacity 2.5s;
+}
+
+.fade-in-active {
+  opacity: 1;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25%, 75% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.selected-link{
+  opacity:0.75;
+}
+
+.header{
+  background-color: $secondary;
+  color: $primary;
+  transition: opacity 0.5s ease;
+  cursor: url('../../../htdocs/images/cursor-footer.svg') 10 10, auto;
+}
+
+.header:hover{
+  opacity:0.95;
+}
+
+
+.send-email {
+border-radius: 50px;
+background: #F8E8BF;
+color: #222;
+padding: 10px 25px;
+border: none;
+transition: background 0.5s ease;
+font-size:14px;
+cursor: url('../../../htdocs/images/hand-pointing.svg') 10 10, pointer;
+outline: none;
+}
+
+.send-email:hover{
+background: #F4E0AE;
+}
+
+.send-email:active{
+background: $primary;
+cursor: url('../../../htdocs/images/cursor-click.svg') 10 10, pointer;
+}
+
+#sender-email {
+border-radius: 50px;
+background: #F8E8BF;
+color: #222;
+padding: 10px 25px;
+border: none;
+transition: background 0.5s ease;
+font-size:14px;
+cursor: url('../../../htdocs/images/hand-pointing.svg') 10 10, pointer;
+outline: none;
+}
+
+#sender-email:hover{
+background: #F4E0AE;
+}
+
+#sender-email:active{
+background: $primary;
+cursor: url('../../../htdocs/images/cursor-click.svg') 10 10, pointer;
+}
+
+#message {
+border-radius: 5px;
+background: #F8E8BF;
+color: #222;
+border: none;
+transition: background 0.5s ease;
+font-size:14px;
+cursor: url('../../../htdocs/images/hand-pointing.svg') 10 10, pointer;
+outline: none;
+}
+
+#message:hover{
+background: #F4E0AE;
+}
+
+#message:active{
+background: $primary;
+cursor: url('../../../htdocs/images/cursor-click.svg') 10 10, pointer;
+}

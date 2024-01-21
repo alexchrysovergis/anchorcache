@@ -1,0 +1,28 @@
+{
+  "name": "anchorcache",
+  "version": "1.1.0",
+  "description": "the most based link saver.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexchrysovergis/anchorcache.git"
+  },
+  "author": "Alex Chrysovergis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexchrysovergis/anchorcache/issues"
+  },
+  "homepage": "https://github.com/alexchrysovergis/anchorcache#readme",
+  "devDependencies": {
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.70.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "gulp": "^4.0.2",
+    "popper.js": "^1.16.1"
+  }
+}
