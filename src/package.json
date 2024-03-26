@@ -17,14 +17,19 @@
   },
   "homepage": "https://github.com/alexchrysovergis/anchorcache#readme",
   "devDependencies": {
+    "chokidar": "^3.6.0",
+    "glob-parent": "^6.0.2",
+    "glob-stream": "^8.0.1",
+    "glob-watcher": "^6.0.0",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.70.0"
+    "sass": "^1.70.0",
+    "vinyl-fs": "^4.0.0"
   },
   "dependencies": {
     "bootstrap": "^5.3.2",
-    "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "popper.js": "^1.16.1"
   }
