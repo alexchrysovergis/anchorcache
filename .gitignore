@@ -1,5 +1,2 @@
 # Dependency directories
 /src/node_modules/
-
-# Build output
-/htdocs/dist/
